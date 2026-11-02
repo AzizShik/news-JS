@@ -1,7 +1,30 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
 body {
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 header {
@@ -13,23 +36,48 @@ header h1 {
     font-weight: 800;
 }
 
-footer {
-    height: 100px;
+.footer {
+    border-top: 1px solid #2a2c33;
+    padding: 24px 16px;
+}
+
+.footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-}
-footer .copyright {
+    align-items: center;
+    gap: 16px 32px;
     font-size: 14px;
-    color: #333;
-    text-align: center;
+    color: #9aa0aa;
 }
-footer .copyright a {
-    color: #444;
+
+.footer__link,
+.footer__course {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
 }
-footer .copyright a:hover {
-    color: #555;
+
+.footer__link:hover,
+.footer__course:hover {
+    color: #30c5ff;
 }
-footer .copyright:before {
-    content: '©';
+
+.footer__course {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer__logo {
+    display: block;
+    width: 28px;
+    height: 28px;
+}
+
+.footer__course-name {
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
