@@ -1,8 +1,10 @@
 import { Source } from '../../../types/api';
 import './sources.css';
 
+type SourceItem = Pick<Source, 'id' | 'name'>;
+
 class Sources {
-    draw(data: readonly Source[]): void {
+    draw(data: readonly SourceItem[]): void {
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = document.querySelector<HTMLTemplateElement>('#sourceItemTemp');
 
