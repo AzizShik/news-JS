@@ -1,3 +1,4 @@
+import placeholder from '../../../img/placeholder.jpg';
 import { Article } from '../../../types/api';
 import './news.css';
 
@@ -31,7 +32,7 @@ class News {
 
             if (!newsDate) return;
 
-            newsPhoto.style.backgroundImage = `url(${item.urlToImage || 'img/news_placeholder.jpg'})`;
+            newsPhoto.style.backgroundImage = `url(${item.urlToImage || placeholder})`;
             newsAuthor.textContent = item.author || item.source.name;
             newsDate.textContent = item.publishedAt.slice(0, 10).split('-').reverse().join('-');
 
