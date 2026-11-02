@@ -4,7 +4,7 @@ import './sources.css';
 type SourceItem = Pick<Source, 'id' | 'name'>;
 
 class Sources {
-    draw(data: readonly SourceItem[]): void {
+    public draw(data: readonly SourceItem[]): void {
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = document.querySelector<HTMLTemplateElement>('#sourceItemTemp');
 
