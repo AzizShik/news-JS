@@ -11,7 +11,7 @@ export enum ApiEndpoint {
     Everything = 'everything',
 }
 
-export type QueryOptions = Readonly<Record<string, string | undefined>>;
+export type QueryOptions = Readonly<Partial<Record<string, string>>>;
 
 export interface LoaderResponseMap {
     [ApiEndpoint.Sources]: SourcesResponse;
